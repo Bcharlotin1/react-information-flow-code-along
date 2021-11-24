@@ -4,10 +4,10 @@ import { getRandomColor } from './randomColorGenerator.js'
 class Child extends Component {
   render() {
     return (
-      <div
-        className="child"
-        style={{backgroundColor: "#FFF"}}
-      ></div>
+      <div onClick={() => this.props.handleColorChange(getRandomColor())}
+      className="child"
+      style={{backgroundColor: this.props.color}}
+    ></div>
     )
   }
 }
